@@ -1,23 +1,19 @@
 import React from "react";
-import grass from "../../assets/borders/a20.png";
+// import grass from "../../assets/borders/a20.png";
 import gard from "../../assets/backgrounds/Background Image (1).png";
+import back from "../../assets/backgrounds/abcs.png";
 
 const Services = () => {
   return (
-    <div className="bg-[#345C39] py-32">
-      <div className="relative">
-        <img
-          src={grass}
-          alt="Grass border"
-          className="absolute -bottom-7 left-0 w-full z-50"
-        />
-      </div>
-
-      <div className="flex items-center justify-between gap-8">
-        <div className="w-[40%]">
+    <div
+      style={{ backgroundImage: `url(${back})` }}
+      className="xs:pt-[30rem] sm:pt-96 md:pt-80 l:pt-52 pb-10 mt-10 bg-[center_25%] bg-cover h-2/3"
+    >
+      <div className="flex flex-col l:flex-row items-center justify-between gap-8">
+        <div className="max-w-sm l:w-[45%] self-start">
           <img src={gard} alt="" width="100%" />
         </div>
-        <div className="flex flex-col items-center space-y-10  px-2">
+        <div className="flex flex-col items-center space-y-4  px-2 sm:px-8 max-w-4xl">
           <p className="text-secondaryTitle font-secondaryTitle text-white">
             Our Services
           </p>
@@ -25,7 +21,7 @@ const Services = () => {
             <span className="text-secondary">Complete Outdoor Solutions</span>{" "}
             for Residential & Commercial Properties
           </p>
-          <p className="max-w-2xl text-white">
+          <p className="max-w-2xl text-white text-center">
             JAL Landscaping and More offers a full range of outdoor services
             designed to enhance, protect, and maintain your property. From
             landscape design to hardscape construction and ongoing maintenance,
