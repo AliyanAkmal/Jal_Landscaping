@@ -3,9 +3,10 @@ import img2 from "../../assets/Rectangle 14.png";
 import img3 from "../../assets/Rectangle 15.png";
 import img4 from "../../assets/Rectangle 16.png";
 import img5 from "../../assets/Rectangle 17.png";
+
 const OutdoorSolutions = () => {
   return (
-    <section className="bg-white pb-52 pt-32 px-4">
+    <section className="bg-white pt-32 mb-14 px-4">
       <div className="max-w-6xl mx-auto text-center">
         {/* Small heading */}
         <p className="text-secondaryTitle font-semibold tracking-wide text-[#142629] mb-2">
@@ -22,36 +23,41 @@ const OutdoorSolutions = () => {
         <p className="max-w-2xl mx-auto text-[#142629] text-sm md:text-base mb-12">
           At JAJ Landscaping and More, we focus on building outdoor spaces that
           are functional, durable, and visually balanced. Every service we offer
-          is designed to improve how your property looks, feels, and
-          performs—using proven methods and quality materials.
+          is designed to improve how your property looks, feels, and performs—
+          using proven methods and quality materials.
         </p>
 
-        {/* Image Grid */}
         {/* Images */}
         <div className="flex justify-center gap-6">
+          {/* LEFT SIDE IMAGE – hidden below L */}
           <img
             src={img1}
-            className="w-56 h-65 object-cover rounded-xl -translate-y-24"
+            className="hidden l:block w-48 xl:w-56 h-64 object-cover rounded-xl -translate-y-24"
             alt=""
           />
+
           <img
             src={img2}
-            className="w-56 h-65 object-cover rounded-xl -translate-y-5"
+            className="xs:w-28 sm:w-36 l:w-48 xl:w-56 sm:h-40 l:h-64 object-cover rounded-xl -translate-y-5"
             alt=""
           />
+
           <img
             src={img3}
-            className="w-56 h-65 object-cover rounded-xl translate-y-6"
+            className="xs:w-28 sm:w-36 l:w-48 xl:w-56 sm:h-40 l:h-64 object-cover rounded-xl translate-y-6"
             alt=""
           />
+
           <img
             src={img4}
-            className="w-56 h-65 object-cover rounded-xl -translate-y-6"
+            className="xs:w-28 sm:w-36 l:w-48 xl:w-56 sm:h-40 l:h-64 object-cover rounded-xl -translate-y-6"
             alt=""
           />
+
+          {/* RIGHT SIDE IMAGE – hidden below L */}
           <img
             src={img5}
-            className="w-56 h-65 object-cover rounded-xl -translate-y-24  hidden md:block"
+            className="hidden l:block w-48 xl:w-56 h-64 object-cover rounded-xl -translate-y-24"
             alt=""
           />
         </div>

@@ -29,10 +29,10 @@ const ProcessSection = () => {
     <section className="bg-[#e6f2df] py-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* THREE COLUMN FLEX */}
-        <div className="flex flex-col md:flex-row items-stretch gap-12">
+        <div className="flex flex-col md:flex-row items-center md:items-stretch gap-12">
           {" "}
           {/* LEFT IMAGE */}
-          <div className="md:w-1/4 flex justify-end self-start pt-12">
+          <div className="w-full justify-center md:justify-start md:w-1/4 flex self-start pt-12">
             <img
               src={mapImg}
               alt="Landscape plan"

@@ -12,8 +12,8 @@ export default {
         light: "#F9FAFB",
       },
       fontSize: {
-        title: "60px",
-        secondaryTitle: "24px",
+        title: "48px",
+        secondaryTitle: "20px",
         paragraph: "21px",
         xs: "0.75rem",
         sm: "14px",
@@ -35,6 +35,17 @@ export default {
         title: "900",
         secondaryTitle: "700",
         paragraph: "500",
+      },
+      screens: {
+        // Add custom breakpoints
+        xs: "375px", // extra small phones
+        sm: "640px", // you can override default sm if you want
+        md: "768px",
+        m: "900px", // custom medium breakpoint
+        l: "1000px",
+        lg: "1200px",
+        xl: "1280px",
+        xxl: "1536px",
       },
     },
   },
