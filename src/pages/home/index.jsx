@@ -9,6 +9,8 @@ import bg3 from "../../assets/backgrounds/Rectangle 96.png";
 import WhyUs from "../../components/whyUs";
 import Reviews from "../../components/reviews";
 import ProcessSection from "../../components/processSection";
+import whyUsData from "../../components/whyUs/data";
+import image1 from "../../assets/backgrounds/Rectangle 99.png";
 
 const Home = () => {
   return (
@@ -75,7 +77,7 @@ const Home = () => {
           and Surrounding Areas • Local Outdoor Services You Can Trust
         </p>
       </div>
-      <WhyUs />
+      <WhyUs data={whyUsData} image={image1} />
       <ProcessSection />
       <Reviews />
     </>
