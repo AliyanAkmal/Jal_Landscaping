@@ -32,7 +32,7 @@ const Header = () => {
             {servicesOpen && (
               <div className="absolute mt-2 bg-[#0e2b3c] border border-gray-700 rounded shadow-lg z-50 w-[250px]">
                 <Link
-                  to="/landscaping"
+                  to="/services"
                   className="block px-4 py-2 hover:bg-gray-800"
                 >
                   Landscaping & Outdoor Design

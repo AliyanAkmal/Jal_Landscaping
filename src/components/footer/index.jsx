@@ -13,10 +13,10 @@ import googleIcon from "../../assets/icons/google-logo-transparent 1.png";
 const FooterHero = () => {
   return (
     <section
-      className="relative w-full pt-52  bg-cover bg-center"
+      className="relative w-full pt-60  bg-cover bg-center mt-20"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="absolute -top-14 flex justify-center w-full z-40">
+      <div className="absolute -top-16 flex justify-center w-full z-40">
         <img
           src={logoImage}
           alt="JAL Landscaping"
