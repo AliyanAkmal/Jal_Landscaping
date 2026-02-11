@@ -6,7 +6,7 @@ import img5 from "../../assets/Rectangle 17.png";
 
 const OutdoorSolutions = () => {
   return (
-    <section className="bg-white pt-32 mb-14 px-4">
+    <section className="bg-white pt-32 mt-20 md:mt-none mb-14 px-4">
       <div className="max-w-6xl mx-auto text-center">
         {/* Small heading */}
         <p className="text-secondaryTitle font-semibold tracking-wide text-[#142629] mb-2">
