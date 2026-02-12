@@ -12,9 +12,9 @@ const HeroSection = () => {
       style={{ backgroundImage: `url(${heroImg})` }}
     >
       <Wrapper>
-        <div className="flex flex-col  l:flex-row justify-between items-center py-10 relative z-10">
+        <div className="flex flex-col gap-6  l:flex-row justify-between items-center py-10 relative z-10">
           {/* Left Text */}
-          <div className="flex flex-col text-center l:text-left gap-6 l:gap-0 md:space-y-4 w-full  lg:w-2/3 justify-center l:justify-between">
+          <div className="flex flex-col text-center l:text-left gap-6 l:gap-0 md:space-y-4 w-full pt-32  lg:max-w-3xl justify-center l:justify-between">
             <div className="md:text-title  text-[36px] font-title text-white leading-tight">
               Outdoor Spaces Built with{" "}
               <span className="text-[#568F3A]">Care, Craft, and Character</span>
@@ -43,11 +43,11 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image */}
-          <div className="relative justify-center w-full z-40  flex  l:justify-end mt-0">
+          <div className="relative justify-center w-full z-40  flex   l:h-auto  l:justify-end mt-0">
             <img
               src={man}
               alt="Man"
-              className="l:absolute relative xs:top-40 sm:top-48 md:top-60  l:-top-40 z-50 md:max-w-[40rem] l:max-w-[40rem] object-contain"
+              className="l:absolute relative xs:top-40 sm:top-48 md:top-60  l:-top-40 z-50  l:w-[40rem] l:max-w-[40rem] object-contain"
             />
           </div>
         </div>
@@ -59,7 +59,7 @@ const HeroSection = () => {
       </div>
 
       {/* Bottom Border */}
-      <div className="relative xs:rotate-2 md:rotate-1 xs:-bottom-5 sm:-bottom-10 md:-bottom-8  l:-bottom-10 lg:-bottom-14 left-0 w-full z-20 overflow-x-hidden">
+      <div className="relative xs:rotate-2 md:rotate-2 -bottom-8 sm:-bottom-10 md:-bottom-8  l:-bottom-10 lg:-bottom-14 left-0 w-full z-20 overflow-x-hidden">
         <img src={floBorder} alt="" className="w-full object-cover" />
       </div>
     </div>
