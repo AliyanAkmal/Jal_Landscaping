@@ -39,6 +39,7 @@ export default {
       screens: {
         // Add custom breakpoints
         xs: "375px", // extra small phones
+        ls: "450px",
         sm: "640px", // you can override default sm if you want
         md: "768px",
         m: "900px", // custom medium breakpoint
