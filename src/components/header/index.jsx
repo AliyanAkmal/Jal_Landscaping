@@ -21,9 +21,9 @@ const Header = () => {
       {/* </div> */}
 
       {/* Blue header */}
-      <div className="bg-[#0e2b3c] text-white h-[40px]  xs:h-[60px] sm:h-[75px] md:h-[85px] l:h-[110px] lg:h-[140px] flex items-end pb-0 sm:pb-1 l:pb-4 lg:pb-8 justify-between px-4 sm:px-6 lg:px-18">
+      <div className="bg-[#0e2b3c] text-white h-[40px]  xs:h-[60px] sm:h-[75px] md:h-[85px] l:h-[110px] lg:h-[140px] flex items-end  px-4 sm:px-6 lg:px-18">
         {/* LEFT NAV — desktop only */}
-        <nav className="hidden l:flex items-center md:space-x-3 lg:space-x-6 font-body pl-3 lg:pl-10">
+        <nav className="hidden l:flex flex-1 items-center md:space-x-3 lg:space-x-6 font-body pl-3 lg:pl-10 justify-start pb-0 sm:pb-1 l:pb-6 lg:pb-8">
           <div className="relative">
             <button
               onClick={() => setServicesOpen(!servicesOpen)}
@@ -68,15 +68,15 @@ const Header = () => {
         </nav>
 
         {/* RIGHT — desktop only */}
-        <div className="hidden l:flex items-center space-x-4 self-end">
-          <div className="flex items-end space-x-2">
+        <div className="hidden l:flex flex-1 items-center space-x-4 self-end justify-end pb-0 sm:pb-1 l:pb-4 lg:pb-8 xl:pb-4">
+          <div className="flex items-center space-x-2">
             <img
               src={phoneIcon}
               alt="phone"
               className="w-10 h-10 rounded-full bg-[#6C9458] p-2"
             />
             <div>
-              <p className="text-sm">Call Us:</p>
+              <p className="text-xs">Call Us:</p>
               <p className="l:text-xs  lg:text-sm font-secondaryTitle">
                 (559) 628-3191 Español
               </p>
@@ -86,9 +86,9 @@ const Header = () => {
             </div>
           </div>
 
-          <button className="bg-primary hover:bg-green-700 l:px-2 lg:px-4 l:py-2 lg:py-4 flex gap-2 items-center rounded font-bold">
+          <button className="bg-primary hover:bg-green-700 l:px-2 lg:p-3 flex gap-2 items-center rounded font-bold">
             <img src={arrowIcon} alt="arrow" className="h-6 w-6" />
-            <span className="text-sm l:text-16px">Get Your Free Estimate</span>
+            <span className="text-xs l:text-16px">Get Your Free Estimate</span>
           </button>
         </div>
 
