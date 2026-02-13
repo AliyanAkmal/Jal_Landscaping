@@ -7,13 +7,13 @@ const Services = () => {
   return (
     <div
       style={{ backgroundImage: `url(${back})` }}
-      className="xs:pt-[30rem] sm:pt-96 md:pt-80 l:pt-52 pb-10 mt-10 bg-[center_25%] bg-cover h-2/3"
+      className="relative mt-10 overflow-hidden bg-top bg-cover bg-no-repeat pt-[30rem] xs:pt-[30rem] sm:pt-[28rem] md:pt-[20rem] l:pt-[24rem] lg:pt-[28rem] pb-10"
     >
-      <div className="flex flex-col l:flex-row items-center justify-between gap-8">
-        <div className="max-w-sm l:w-[45%] self-start">
-          <img src={gard} alt="" width="100%" />
+      <div className="flex w-full flex-col items-start justify-between gap-8 l:flex-row">
+        <div className="w-full max-w-sm l:w-[45%] shrink-0 overflow-hidden">
+          <img src={gard} alt="" className="block h-auto w-full object-cover" />
         </div>
-        <div className="flex flex-col items-center space-y-4  px-2 sm:px-8 max-w-4xl">
+        <div className="mx-auto flex max-w-4xl flex-col items-center space-y-4 px-4 sm:px-8">
           <p className="text-secondaryTitle font-secondaryTitle text-white">
             Our Services
           </p>

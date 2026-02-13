@@ -28,7 +28,7 @@ const WhyUs = ({ data, image }) => {
       <img
         src={image}
         alt=""
-        className="max-w-md xs:max-w-sm sm:max-w-xl l:max-w-md xl:max-w-lg xxl:max-w-xl h-full object-cover self-end l:ml-auto"
+        className="max-w-xs xs:max-w-sm sm:max-w-xl l:max-w-md xl:max-w-lg xxl:max-w-xl h-full object-cover self-end l:ml-auto"
       />
     </div>
   );
