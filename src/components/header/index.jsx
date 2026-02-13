@@ -1,53 +1,92 @@
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/header/Header.png";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import arrowIcon from "../../assets/icons/Vector.png";
 import phoneIcon from "../../assets/icons/Vector (1).png";
 import menuLgo from "../../assets/Frame 9.png";
 
 const Header = () => {
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const servicesDropdownRef = useRef(null);
+  const mobileMenuRef = useRef(null);
+  const mobileMenuButtonRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        servicesDropdownRef.current &&
+        !servicesDropdownRef.current.contains(event.target)
+      ) {
+        setDesktopServicesOpen(false);
+      }
+
+      if (
+        mobileMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target) &&
+        mobileMenuButtonRef.current &&
+        !mobileMenuButtonRef.current.contains(event.target)
+      ) {
+        setMobileMenuOpen(false);
+        setMobileServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <header className="relative w-full z-30">
       {/* Center logo */}
       {/* <div className="absolute left-1/2 -translate-x-1/2 top-0 z-10 w-full"> */}
+
       <img
         src={logoImage}
         alt="JAL Landscaping Logo"
         className=" h-auto absolute left-1/2 -translate-x-1/2 top-0 z-10 w-full"
       />
+
       {/* </div> */}
 
       {/* Blue header */}
       <div className="bg-[#0e2b3c] text-white h-[40px]  xs:h-[60px] sm:h-[75px] md:h-[85px] l:h-[110px] lg:h-[140px] flex items-end  px-4 sm:px-6 lg:px-18">
         {/* LEFT NAV — desktop only */}
-        <nav className="hidden l:flex flex-1 items-center md:space-x-3 lg:space-x-6 font-body pl-3 lg:pl-10 justify-start pb-0 sm:pb-1 l:pb-6 lg:pb-8">
-          <div className="relative">
+        <nav className="hidden l:flex z-50 flex-1 items-center md:space-x-3 lg:space-x-6 font-body pl-3 lg:pl-10 justify-start pb-0 sm:pb-1 l:pb-6 lg:pb-8">
+          <div ref={servicesDropdownRef} className="relative">
             <button
-              onClick={() => setServicesOpen(!servicesOpen)}
+              onClick={() => setDesktopServicesOpen(!desktopServicesOpen)}
               className="hover:text-gray-300"
             >
               Services ▾
             </button>
 
-            {servicesOpen && (
+            {desktopServicesOpen && (
               <div className="absolute mt-2 bg-[#0e2b3c] border border-gray-700 rounded shadow-lg z-50 w-[250px]">
                 <Link
                   to="/services"
+                  onClick={() => setDesktopServicesOpen(false)}
                   className="block px-4 py-2 hover:bg-gray-800"
                 >
                   Landscaping & Outdoor Design
                 </Link>
                 <Link
                   to="/hardscape"
+                  onClick={() => setDesktopServicesOpen(false)}
                   className="block px-4 py-2 hover:bg-gray-800"
                 >
                   Hardscape & Construction
                 </Link>
                 <Link
                   to="/maintenance"
+                  onClick={() => setDesktopServicesOpen(false)}
                   className="block px-4 py-2 hover:bg-gray-800"
                 >
                   Property Maintenance & Services
@@ -62,13 +101,13 @@ const Header = () => {
           <Link to="/gallery" className="hover:text-gray-300">
             Gallery
           </Link>
-          <Link to="/contact" className="hover:text-gray-300">
-            Contact
+          <Link to="/" className="hover:text-gray-300">
+            Home
           </Link>
         </nav>
 
         {/* RIGHT — desktop only */}
-        <div className="hidden l:flex flex-1 items-center space-x-4 self-end justify-end pb-0 sm:pb-1 l:pb-4 lg:pb-8 xl:pb-4">
+        <div className="hidden z-50 l:flex flex-1 items-center space-x-4 self-end justify-end pb-0 sm:pb-1 l:pb-4 lg:pb-8 xl:pb-4">
           <div className="flex items-center space-x-2">
             <img
               src={phoneIcon}
@@ -86,16 +125,23 @@ const Header = () => {
             </div>
           </div>
 
-          <button className="bg-primary hover:bg-green-700 l:px-2 lg:p-3 flex gap-2 items-center rounded font-bold">
+          <button className="bg-primary hover:bg-green-700 l:p-2 lg:p-3 flex gap-2 items-center rounded font-bold">
             <img src={arrowIcon} alt="arrow" className="h-6 w-6" />
             <span className="text-xs l:text-16px">Get Your Free Estimate</span>
           </button>
         </div>
 
         {/* MOBILE MENU BUTTON */}
-        <div className="l:hidden ml-auto relative z-50">
+        <div
+          ref={mobileMenuButtonRef}
+          className="l:hidden ml-auto relative z-50"
+        >
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() => {
+              const nextOpen = !mobileMenuOpen;
+              setMobileMenuOpen(nextOpen);
+              if (!nextOpen) setMobileServicesOpen(false);
+            }}
             className="max-w-10 xs:max-w-16 sm:max-w-20"
           >
             <img src={menuLgo} alt="" className="w-full h-auto" />
@@ -105,30 +151,54 @@ const Header = () => {
 
       {/* MOBILE DROPDOWN */}
       {mobileMenuOpen && (
-        <div className="l:hidden bg-[#0F2530] text-white px-6 pb-10 pt-20 text-center space-y-6">
+        <div
+          ref={mobileMenuRef}
+          className="l:hidden bg-[#0F2530] text-white px-6 pb-10 pt-20 text-center space-y-6"
+        >
           {/* SERVICES DROPDOWN */}
           <div>
             <button
-              onClick={() => setServicesOpen(!servicesOpen)}
+              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
               className="w-full text-xl font-semibold flex justify-center items-center gap-2"
             >
               Services
               <span
-                className={`transition-transform ${servicesOpen ? "rotate-180" : ""} font-thin`}
+                className={`transition-transform ${mobileServicesOpen ? "rotate-180" : ""} font-thin`}
               >
                 ˅
               </span>
             </button>
 
-            {servicesOpen && (
+            {mobileServicesOpen && (
               <div className="mt-4 space-y-3 text-lg">
-                <Link to="/services" className="block opacity-90">
+                <Link
+                  to="/services"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobileServicesOpen(false);
+                  }}
+                  className="block opacity-90"
+                >
                   Landscaping & Outdoor Design
                 </Link>
-                <Link to="/hardscape" className="block opacity-90">
+                <Link
+                  to="/hardscape"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobileServicesOpen(false);
+                  }}
+                  className="block opacity-90"
+                >
                   Hardscape & Construction
                 </Link>
-                <Link to="/maintenance" className="block opacity-90">
+                <Link
+                  to="/maintenance"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobileServicesOpen(false);
+                  }}
+                  className="block opacity-90"
+                >
                   Property Maintenance & Services
                 </Link>
               </div>
@@ -136,15 +206,36 @@ const Header = () => {
           </div>
 
           {/* OTHER LINKS */}
-          <Link to="/about" className="block text-lg font-semibold">
+          <Link
+            to="/about"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              setMobileServicesOpen(false);
+            }}
+            className="block text-lg font-semibold"
+          >
             About Us
           </Link>
 
-          <Link to="/gallery" className="block text-lg font-semibold">
+          <Link
+            to="/gallery"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              setMobileServicesOpen(false);
+            }}
+            className="block text-lg font-semibold"
+          >
             Gallery
           </Link>
 
-          <Link to="/contact" className="block text-lg font-semibold">
+          <Link
+            to="/contact"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              setMobileServicesOpen(false);
+            }}
+            className="block text-lg font-semibold"
+          >
             Contact
           </Link>
 
