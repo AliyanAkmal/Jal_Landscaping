@@ -67,12 +67,7 @@ const Home = () => {
           "Complete Landscaping Solutions",
         ]}
       />
-      <div className="bg-[#568F3A] py-3 flex justify-start">
-        <p className="text-center text-white pb-16 w-full text-[40px] font-secondaryTitle overflow-hidden h-10">
-          ffds Proudly Serving Fresno, CA & Nearby Communities • Serving Fresno
-          and Surrounding Areas • Local Outdoor Services You Can Trust
-        </p>
-      </div>
+      <AdRunner />
       <WhyUs data={whyUsData} image={image1} />
       <ProcessSection />
       <Reviews />
