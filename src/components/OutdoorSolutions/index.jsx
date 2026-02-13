@@ -28,36 +28,36 @@ const OutdoorSolutions = () => {
         </p>
 
         {/* Images */}
-        <div className="flex justify-center gap-2 xs:gap-6">
+        <div className="flex justify-center l:gap-4 gap-2 xs:gap-6">
           {/* LEFT SIDE IMAGE – hidden below L */}
           <img
             src={img1}
-            className="hidden l:block w-48 xl:w-56 h-64 object-cover rounded-xl -translate-y-24"
+            className="hidden l:block w-48 xl:w-56 l:w-44 h-56 object-cover rounded-xl -translate-y-24"
             alt=""
           />
 
           <img
             src={img2}
-            className="w-20 h-28 xs:w-28 sm:w-36 l:w-48 xl:w-56 xs:h-32 sm:h-40 l:h-64 object-cover rounded-xl -translate-y-5"
+            className="w-20 h-28 xs:w-28 sm:w-36 l:w-44 xl:w-56 xs:h-32 sm:h-40 l:h-56 object-cover rounded-xl -translate-y-5"
             alt=""
           />
 
           <img
             src={img3}
-            className="w-20 h-28 xs:w-28 sm:w-36 l:w-48 xl:w-56 xs:h-32 sm:h-40 l:h-64 object-cover rounded-xl translate-y-6"
+            className="w-20 h-28 xs:w-28 sm:w-36 l:w-44 xl:w-56 xs:h-32 sm:h-40 l:h-56 object-cover rounded-xl translate-y-6"
             alt=""
           />
 
           <img
             src={img4}
-            className="w-20 h-28 xs:w-28 sm:w-36 l:w-48 xl:w-56 xs:h-32 sm:h-40 l:h-64 object-cover rounded-xl -translate-y-6"
+            className="w-20 h-28 xs:w-28 sm:w-36 l:w-44 xl:w-56 xs:h-32 sm:h-40 l:h-56 object-cover rounded-xl -translate-y-6"
             alt=""
           />
 
           {/* RIGHT SIDE IMAGE – hidden below L */}
           <img
             src={img5}
-            className="hidden l:block w-48 xl:w-56 h-64 object-cover rounded-xl -translate-y-24"
+            className="hidden l:block w-48 xl:w-56 l:w-44 h-56 object-cover rounded-xl -translate-y-24"
             alt=""
           />
         </div>
