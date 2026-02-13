@@ -14,7 +14,7 @@ const WhyUs = ({ data, image }) => {
           {data.cards.map((item, index) => (
             <div
               key={index}
-              className="bg-[#345C39] text-white text-start px-4 l:px-4 py-8 max-w-90 rounded-2xl lg:rounded-[40px]"
+              className="bg-[#345C39] text-white text-start px-4 l:px-6 py-4 l:py-6 max-w-90 rounded-2xl lg:rounded-[40px]"
             >
               <div className="text-[22px] leading-tight font-secondaryTitle">
                 {item.title}

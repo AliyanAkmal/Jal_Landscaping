@@ -8,6 +8,7 @@ import whyUsData from "../../components/whyUs/data";
 import image1 from "../../assets/backgrounds/Rectangle 99.png";
 import ProcessSection from "../../components/processSection";
 import Reviews from "../../components/reviews";
+import AdRunner from "../../components/adRunner";
 // import floBorder from "../../assets/borders/Untitled_design__6_-removebg-preview.png";
 
 const Services = () => {
@@ -50,12 +51,7 @@ const Services = () => {
       </div>
 
       <OurServicesSteps />
-      <div className="bg-[#568F3A] py-3 flex justify-start">
-        <p className="text-center text-white pb-16 w-full text-[40px] font-secondaryTitle overflow-hidden h-10">
-          ffds Proudly Serving Fresno, CA & Nearby Communities • Serving Fresno
-          and Surrounding Areas • Local Outdoor Services You Can Trust
-        </p>
-      </div>
+      <AdRunner />
       <WhyUs data={whyUsData} image={image1} />
       <ProcessSection />
       <Reviews />

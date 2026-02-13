@@ -11,6 +11,7 @@ import Reviews from "../../components/reviews";
 import ProcessSection from "../../components/processSection";
 import whyUsData from "../../components/whyUs/data";
 import image1 from "../../assets/backgrounds/Rectangle 99.png";
+import AdRunner from "../../components/adRunner";
 
 const Home = () => {
   return (
@@ -23,12 +24,7 @@ const Home = () => {
         <OutdoorSolutions />
       </div>{" "}
       <Services />
-      <div className="bg-[#568F3A] py-3 flex justify-start">
-        <p className="text-center text-white pb-16 w-full text-[40px] font-secondaryTitle overflow-hidden h-10">
-          ffds Proudly Serving Fresno, CA & Nearby Communities • Serving Fresno
-          and Surrounding Areas • Local Outdoor Services You Can Trust
-        </p>
-      </div>
+      <AdRunner />
       <OverlayCardSection
         bgImage={bg1}
         align="right"
