@@ -43,7 +43,7 @@ const Services = () => {
         </div> */}
       </div>
       {/* absolute left-0 right-0 -bottom-16  */}
-      <div className="absolute right-0  -bottom-20 xs:-bottom-0 sm:-bottom-40 md:-bottom-40 l:-bottom-40 z-50 flex justify-end w-full pl-4 sm:px-0">
+      <div className="absolute right-0  -bottom-96 xs:-bottom-60 sm:-bottom-96 md:-bottom-96 l:-bottom-96 z-50 flex justify-end w-full pl-4 sm:px-0">
         <EstimateForm />
       </div>
       <div className="py-24">
