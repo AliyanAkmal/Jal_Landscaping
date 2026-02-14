@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/header/Header.png";
+import logoMobile from "../../assets/header/Header (2).png";
 import { useEffect, useRef, useState } from "react";
 import arrowIcon from "../../assets/icons/Vector.png";
 import phoneIcon from "../../assets/icons/Vector (1).png";
@@ -48,19 +49,22 @@ const Header = () => {
       <Link to="/">
         <div className="cursor-pointer  w-24 h-20 xs:w-28 xs:h-20 sm:w-32 sm:h-32 md:w-40 l:w-52 l:h-48 lg:w-60 lg:h-52 xl:w-72 xl:h-56 xxl:w-96 xxl:h-80 absolute z-50 left-[40%] rounded-full"></div>
       </Link>
-      {/* Center logo */}
-      {/* <div className="absolute left-1/2 -translate-x-1/2 top-0 z-10 w-full"> */}
 
+      <img
+        src={logoMobile}
+        alt="JAL Landscaping Logo"
+        className="md:hidden h-auto absolute left-1/2 -translate-x-1/2 top-0 z-10 w-full"
+      />
       <img
         src={logoImage}
         alt="JAL Landscaping Logo"
-        className=" h-auto absolute left-1/2 -translate-x-1/2 top-0 z-10 w-full"
+        className="hidden md:block h-auto absolute left-1/2 -translate-x-1/2 top-0 z-10 w-full"
       />
 
       {/* </div> */}
 
       {/* Blue header */}
-      <div className="bg-[#0e2b3c] text-white h-[40px]  xs:h-[60px] sm:h-[75px] md:h-[85px] l:h-[110px] lg:h-[140px] flex items-end  px-4 sm:px-6 lg:px-18">
+      <div className="bg-[#0e2b3c] text-white h-[70px]  xs:h-[80px] sm:h-[96px] md:h-[85px] l:h-[110px] lg:h-[140px] flex items-end  px-4 sm:px-6 lg:px-18">
         {/* LEFT NAV — desktop only */}
         <nav className="hidden l:flex z-40 flex-1 items-center md:space-x-3 lg:space-x-6 font-body pl-3 lg:pl-10 justify-start pb-0 sm:pb-1 l:pb-6 lg:pb-8">
           <div ref={servicesDropdownRef} className="relative">
@@ -145,7 +149,7 @@ const Header = () => {
               setMobileMenuOpen(nextOpen);
               if (!nextOpen) setMobileServicesOpen(false);
             }}
-            className="max-w-10 xs:max-w-16 sm:max-w-20"
+            className="max-w-16 xs:max-w-20 sm:max-w-20"
           >
             <img src={menuLgo} alt="" className="w-full h-auto" />
           </button>
