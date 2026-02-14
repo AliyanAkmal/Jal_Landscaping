@@ -1,5 +1,5 @@
 import React from "react";
-import contactBg from "../../assets/contactpage.webp";
+import contactBg from "../../assets/housei.avif";
 const Contact = () => {
   return (
     <main className="w-full">
@@ -16,6 +16,15 @@ const Contact = () => {
 
         {/* Optional Gradient on Top for Depth */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-20"></div>
+
+        {/* Enhanced Bottom Fade to White */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-40 z-20"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 20%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%)",
+          }}
+        ></div>
 
         {/* Content */}
         <div className="relative z-30 max-w-4xl mx-auto pt-32">
