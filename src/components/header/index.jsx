@@ -95,7 +95,7 @@ const Header = () => {
             )}
           </div>
 
-          <Link to="/about" className="hover:text-gray-300">
+          <Link to="/about-us" className="hover:text-gray-300">
             About Us
           </Link>
           <Link to="/gallery" className="hover:text-gray-300">
@@ -207,7 +207,7 @@ const Header = () => {
 
           {/* OTHER LINKS */}
           <Link
-            to="/about"
+            to="/about-us"
             onClick={() => {
               setMobileMenuOpen(false);
               setMobileServicesOpen(false);
