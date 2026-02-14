@@ -5,6 +5,7 @@ import Services from "../pages/services";
 import AboutUs from "../pages/aboutUs/index";
 import Contact from "../pages/contact";
 import GalleryPage from "../pages/gallery";
+import Hardscape from "../pages/hardscape";
 
 export const routes = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const routes = createBrowserRouter([
       {
         path: "services",
         element: <Services />,
+      },
+      {
+        path: "hardscape",
+        element: <Hardscape />,
       },
       {
         path: "about-us",
