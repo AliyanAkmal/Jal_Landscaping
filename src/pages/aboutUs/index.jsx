@@ -41,10 +41,10 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="bg-white mb-44">
+    <div className="bg-white md:mb-44 ">
       {/* Hero Section */}
       <div
-        className="relative bg-center bg-no-repeat min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden"
+        className="relative bg-center bg-no-repeat min-h-[400px] md:min-h-[500px] border-none    lg:min-h-[600px] flex items-center justify-center overflow-hidden"
         style={{ 
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
@@ -75,7 +75,7 @@ const AboutUs = () => {
       <Wrapper>
         <div className="pt-20 pb-0">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
-            <div className="lg:w-1/2 pb-32">
+            <div className="lg:w-1/2 lg:pb-32">
               <p className="text-[#345C39] font-semibold text-base md:text-lg mb-3 tracking-wider">OUR STORY</p>
               <h2 className="text-[36px] md:text-[44px] lg:text-[48px] font-title text-gray-900 leading-tight mb-6">
                 Fresno's Trusted <span className="text-[#345C39]">Landscaping Company</span>
@@ -200,7 +200,7 @@ const AboutUs = () => {
       </Wrapper>
 
       {/* Why Choose Us - Modernized */}
-      <div className="bg-white py-20">
+      <div className="bg-white pb-20 md:py-20">
         <Wrapper>
           <div className="text-center mb-16">
             <p className="text-[#345C39] font-semibold text-base md:text-lg mb-3 tracking-wider">WHY CHOOSE US</p>
@@ -214,7 +214,7 @@ const AboutUs = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 */}
-            <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div className="group relative bg-white rounded-2xl overflow-hidden md:shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" style={{ boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-[#345C39]/90 to-[#345C39] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative p-8">
                 <div className="w-16 h-16 bg-[#345C39]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors duration-300">
@@ -232,7 +232,7 @@ const AboutUs = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div className="group relative bg-white rounded-2xl overflow-hidden md:shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" style={{ boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-[#345C39]/90 to-[#345C39] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative p-8">
                 <div className="w-16 h-16 bg-[#345C39]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors duration-300">
@@ -250,7 +250,7 @@ const AboutUs = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div className="group relative bg-white rounded-2xl overflow-hidden md:shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" style={{ boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-[#345C39]/90 to-[#345C39] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative p-8">
                 <div className="w-16 h-16 bg-[#345C39]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors duration-300">
@@ -268,7 +268,7 @@ const AboutUs = () => {
             </div>
 
             {/* Card 4 */}
-            <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div className="group relative bg-white rounded-2xl overflow-hidden md:shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" style={{ boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-[#345C39]/90 to-[#345C39] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative p-8">
                 <div className="w-16 h-16 bg-[#345C39]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors duration-300">
