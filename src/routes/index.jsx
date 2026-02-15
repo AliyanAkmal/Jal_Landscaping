@@ -6,6 +6,7 @@ import AboutUs from "../pages/aboutUs/index";
 import Contact from "../pages/contact";
 import GalleryPage from "../pages/gallery";
 import Hardscape from "../pages/hardscape";
+import Maintenance from "../pages/maintenance";
 
 export const routes = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const routes = createBrowserRouter([
       {
         path: "hardscape",
         element: <Hardscape />,
+      },
+      {
+        path: "maintenance",
+        element: <Maintenance />,
       },
       {
         path: "about-us",
