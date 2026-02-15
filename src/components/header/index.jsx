@@ -45,6 +45,9 @@ const Header = () => {
 
   return (
     <header className="relative w-full z-30">
+      <Link to="/">
+        <div className="cursor-pointer  w-24 h-20 xs:w-28 xs:h-20 sm:w-32 sm:h-32 md:w-40 l:w-52 l:h-48 lg:w-60 lg:h-52 xl:w-72 xl:h-56 xxl:w-96 xxl:h-80 absolute z-50 left-[40%] rounded-full"></div>
+      </Link>
       {/* Center logo */}
       {/* <div className="absolute left-1/2 -translate-x-1/2 top-0 z-10 w-full"> */}
 
@@ -59,7 +62,7 @@ const Header = () => {
       {/* Blue header */}
       <div className="bg-[#0e2b3c] text-white h-[40px]  xs:h-[60px] sm:h-[75px] md:h-[85px] l:h-[110px] lg:h-[140px] flex items-end  px-4 sm:px-6 lg:px-18">
         {/* LEFT NAV — desktop only */}
-        <nav className="hidden l:flex z-50 flex-1 items-center md:space-x-3 lg:space-x-6 font-body pl-3 lg:pl-10 justify-start pb-0 sm:pb-1 l:pb-6 lg:pb-8">
+        <nav className="hidden l:flex z-40 flex-1 items-center md:space-x-3 lg:space-x-6 font-body pl-3 lg:pl-10 justify-start pb-0 sm:pb-1 l:pb-6 lg:pb-8">
           <div ref={servicesDropdownRef} className="relative">
             <button
               onClick={() => setDesktopServicesOpen(!desktopServicesOpen)}
@@ -101,13 +104,13 @@ const Header = () => {
           <Link to="/gallery" className="hover:text-gray-300">
             Gallery
           </Link>
-          <Link to="/" className="hover:text-gray-300">
-            Home
+          <Link to="/contact" className="hover:text-gray-300">
+            Contact
           </Link>
         </nav>
 
         {/* RIGHT — desktop only */}
-        <div className="hidden z-50 l:flex flex-1 items-center space-x-4 self-end justify-end pb-0 sm:pb-1 l:pb-4 lg:pb-8 xl:pb-4">
+        <div className="hidden z-40 l:flex flex-1 items-center space-x-4 self-end justify-end pb-0 sm:pb-1 l:pb-4 lg:pb-8 xl:pb-4">
           <div className="flex items-center space-x-2">
             <img
               src={phoneIcon}
