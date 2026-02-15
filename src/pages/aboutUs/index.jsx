@@ -9,7 +9,7 @@ import AboutCTA from "../../components/aboutUs/AboutCTA";
 
 const AboutUs = () => {
   return (
-    <div className="bg-white md:mb-44">
+    <div className=" md:mb-44">
       <AboutHero />
       <AboutStory />
       <AboutTimeline />

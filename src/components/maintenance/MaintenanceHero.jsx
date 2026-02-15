@@ -1,7 +1,7 @@
 import React from "react";
 import background from "../../assets/backgrounds/serviceBg.png";
 
-const HardscapeHero = () => {
+const MaintenanceHero = () => {
     return (
         <div
             style={{ backgroundImage: `url(${background})` }}
@@ -11,17 +11,15 @@ const HardscapeHero = () => {
                 <div className="text-white text-[36px] sm:text-title font-[800] sm:font-title leading-tight tracking-tight">
                     {" "}
                     <span className="text-[#568F3A] block sm:inline">
-                        JAL Hardscaping
+                        Full-Service
                     </span>{" "}
-                    Built to Last
+                    Property Maintenance
                 </div>
                 <div className="text-[18px] sm:text-[24px] font-secondaryTitle text-white/90 max-w-2xl">
-                    Where structural engineering meets outdoor artistry.
+                    Preserving the beauty and health of your Fresno landscape year-round.
                 </div>
                 <div className="text-white/70 text-md max-w-xl leading-relaxed font-body">
-                    We don't just lay stone; we build foundations. From structural
-                    retaining walls to custom paver systems, our work is engineered
-                    for the Central Valley climate.
+                    From precision lawn care and irrigation management to seasonal cleanups, we provide the consistent, professional attention your property deserves.
                 </div>
             </div>
 
@@ -29,4 +27,4 @@ const HardscapeHero = () => {
     );
 };
 
-export default HardscapeHero;
+export default MaintenanceHero;
