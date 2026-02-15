@@ -44,8 +44,13 @@ const AboutUs = () => {
     <div className="bg-white mb-44">
       {/* Hero Section */}
       <div
-        className="relative bg-cover bg-center min-h-[600px] flex items-center justify-center"
-        style={{ backgroundImage: `url(${heroImg})` }}
+        className="relative bg-center bg-no-repeat min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden"
+        style={{ 
+          backgroundImage: `url(${heroImg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/45" />
         <Wrapper>
