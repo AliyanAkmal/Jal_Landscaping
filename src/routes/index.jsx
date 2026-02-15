@@ -4,6 +4,7 @@ import Home from "../pages/home";
 import Services from "../pages/services";
 import AboutUs from "../pages/aboutUs/index";
 import Contact from "../pages/contact";
+import GalleryPage from "../pages/gallery";
 import Hardscape from "../pages/hardscape";
 
 export const routes = createBrowserRouter([
@@ -21,7 +22,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: "hardscape",
-        element: <Hardscape/>,
+        element: <Hardscape />,
       },
       {
         path: "about-us",
@@ -30,6 +31,10 @@ export const routes = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "gallery",
+        element: <GalleryPage />,
       },
     ],
   },
